@@ -1,0 +1,4 @@
+212c212
+< call s:latex_SetGlobalVariable ( 'Latex_MapLeader', '´' )
+---
+> call s:latex_SetGlobalVariable ( 'Latex_MapLeader', '`' )
