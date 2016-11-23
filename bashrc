@@ -78,3 +78,6 @@ fi
 
 ## For some reason bash wants to use jekyll which isn't there
 alias jekyll=/usr/bin/jekyll
+
+## I used todo.sh to manage my lists
+alias t="/home/herb/.todo/todo.sh -d /home/herb/.todo/todo.cfg"
