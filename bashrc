@@ -4,7 +4,7 @@
 [ -z "$PS1" ] && return
 
 ## Prompt
-PS1="\[\033[0;35m\]\\h~\\t:\[\033[1;37m\] "
+PS1="\n\[\e[1;35m\](\[\e[37;1m\]\u\[\e[35;1m\])-(\[\e[37;1m\]jobs:\j\[\e[35;1m\])-(\[\e[37;1m\]\w\[\e[35;1m\])\n\[\033[1;35m\]\\t \[\033[1;37m\]$ "
 
 ## This is a vi shop
 set -o vi
@@ -12,7 +12,6 @@ set -o vi
 export MYGVIMRC
 export MYVIMRC
 
-## SVN just doesn't want to play with vim anymore
 SVN_EDITOR=vim
 EDITOR=vim
 VISUAL=gvim
@@ -23,36 +22,6 @@ HISTFILESIZE=20000
 export HISTSIZE
 shopt -s histappend
 PROMP_COMMAND="history -a';$PROMPT_COMMAND"
-
-## Quick cd
-alias projects='/media/blue_passport/projects/'
-
-## Quick ssh
-alias hra='ssh nbkfklh@cltqtflphra0101.bankofamerica.com'
-alias hrb='ssh nbkfklh@cltqtflphrb0101.bankofamerica.com'
-alias hrd='ssh nbkfklh@cltqtflphrd0101.bankofamerica.com'
-alias hrf='ssh nbkfklh@cltqtflphrf0101.bankofamerica.com'
-alias ssa='ssh nbkfklh@atlqtflpssa0101.bankofamerica.com'
-alias ssc='ssh nbkfklh@atlqtflpssc0101.bankofamerica.com'
-alias dev='ssh nbkfklh@atlqtflddlz0101.bankofamerica.com'
-alias dv2='ssh nbkfklh@cltqtfldplz0101.bankofamerica.com'
-alias rch='ssh nbkfklh@rchciglpclu0101.bankofamerica.com'
-alias pno='ssh nbkfklh@pnociglpclu0101.bankofamerica.com'
-alias dze='ssh nbkfklh@pnociglpclu0101.bankofamerica.com'
-
-## Calibration quick ssh
-alias pmcal='ssh pm@pnociglpclu0101.bankofamerica.com'
-alias volcal='ssh calibrate@pnociglpclu0101.bankofamerica.com'
-alias crvcal='ssh calibrate@cltqtflphrb0101.bankofamerica.com'
-
-## Passport drive
-alias mountb='sudo mount -t ntfs -U 4E1AEA7B1AEA6007 /media/blue_passport'
-alias umountb='sudo umount /media/blue_passport'
-
-
-## Routine tasks
-alias pm='ssc;ssc'
-alias eod='ssc;ssc;hrb'
 
 ## Aliases from stock ubuntu
 # some more ls aliases
@@ -75,9 +44,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-## For some reason bash wants to use jekyll which isn't there
-alias jekyll=/usr/bin/jekyll
 
 ## I used todo.sh to manage my lists
 alias t="/home/herb/.todo/todo.sh -d /home/herb/.todo/todo.cfg"
