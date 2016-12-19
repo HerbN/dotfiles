@@ -5,6 +5,9 @@ call pathogen#infect()
 
 filetype plugin indent on    " required
 
+" Create a project filetype for todo.txt ouline files
+au BufNewFile,BufRead *.proj set filetype=project
+
 set nocompatible
 
 set modelines=0
