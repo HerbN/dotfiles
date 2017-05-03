@@ -1,0 +1,3 @@
+2017/05/01-20:45:52.252 5011 Reusing MANIFEST /home/herb/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2017/05/01-20:45:52.253 5011 Recovering log #3
+2017/05/01-20:45:52.253 5011 Reusing old log /home/herb/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000003.log 
