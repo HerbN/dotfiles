@@ -44,7 +44,7 @@ nnoremap / /\v
 vnoremap / /\v
 set ignorecase
 set smartcase
-set gdefault " reverses the meaning of g on the end of regex sub...now default all on line
+"set gdefault " reverses the meaning of g on the end of regex sub...now default all on line
 set incsearch
 set showmatch
 set hlsearch
@@ -72,6 +72,22 @@ set number
 
 syntax on
 
+" enable folder specific vimrc
+set exrc
+set secure
+
 " vim-latex recommended/required settings
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+" Ditto config
+au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+
+nmap <leader>di <Plug>ToggleDitto      " Turn it on and off
+
+nmap =d <Plug>DittoNext                " Jump to the next word
+nmap -d <Plug>DittoPrev                " Jump to the previous word
+nmap +d <Plug>DittoGood                " Ignore the word under the cursor
+nmap _d <Plug>DittoBad                 " Stop ignoring the word under the cursor
+nmap ]d <Plug>DittoMore                " Show the next matches
+nmap [d <Plug>DittoLess                " Show the previous matches
